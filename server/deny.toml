@@ -1,0 +1,72 @@
+targets = [
+    { triple = "x86_64-unknown-linux-gnu" },
+    { triple = "x86_64-unknown-linux-musl" },
+    { triple = "x86_64-apple-darwin" },
+    { triple = "x86_64-pc-windows-msvc" },
+]
+
+[advisories]
+db-path = "~/.cargo/advisory-db"
+db-urls = ["https://github.com/rustsec/advisory-db"]
+vulnerability = "deny"
+unmaintained = "deny"
+yanked = "deny"
+notice = "deny"
+ignore = [
+    #"RUSTSEC-0000-0000",
+]
+
+[licenses]
+unlicensed = "deny"
+allow-osi-fsf-free = "both"
+copyleft = "deny"
+allow = [
+    "MIT",
+    "Apache-2.0",
+    "BSD-3-Clause",
+    "ISC",
+    "Zlib",
+    "0BSD",
+    "BSD-2-Clause",
+    "CC0-1.0",
+    "OpenSSL"
+]
+default = "deny"
+exceptions = [
+    { name = "webpki-roots", allow = ["MPL-2.0"] },
+]
+
+[[licenses.clarify]]
+name = "ring"
+version = "*"
+expression = "MIT AND ISC AND OpenSSL"
+license-files = []
+
+[bans]
+multiple-versions = "warn"
+wildcards = "deny"
+highlight = "all"
+allow = [
+    #{ name = "ansi_term", version = "=0.11.0" },
+]
+deny = [
+    #{ name = "ansi_term", version = "=0.11.0", wrappers = [] },
+]
+# Certain crates/versions that will be skipped when doing duplicate detection.
+skip = [
+    #{ name = "ansi_term", version = "=0.11.0" },
+]
+skip-tree = [
+    #{ name = "ansi_term", version = "=0.11.0", depth = 20 },
+]
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
+allow-git = []
+
+[sources.allow-org]
+github = ["robertwayne"]
+gitlab = [""]
+bitbucket = [""]

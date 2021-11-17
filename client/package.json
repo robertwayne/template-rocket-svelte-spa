@@ -1,0 +1,39 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "repository": "",
+  "author": "Rob Wagner <rob@sombia.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development vite",
+    "build": "NODE_ENV=production vite build",
+    "serve": "vite preview",
+    "fmt": "prettier --write --plugin-search-dir=. src/**/*.{js,ts,svelte}",
+    "lint": "eslint src/**/*.{js,ts,svelte}",
+    "lint:fix": "eslint --fix --fix-type problem,suggestion src/**/*.{js,ts,svelte}"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^5.0.11",
+    "dotenv": "^10.0.0",
+    "eslint": "^8.2.0",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "postcss": "^8.3.11",
+    "postcss-load-config": "^3.1.0",
+    "prettier": "^2.4.1",
+    "prettier-plugin-svelte": "^2.5.0",
+    "svelte-preprocess": "^4.9.8",
+    "tailwindcss": "^2.2.19",
+    "typescript": "^4.4.4",
+    "vite": "^2.6.14"
+  },
+  "dependencies": {
+    "svelte": "^3.44.1"
+  }
+}
