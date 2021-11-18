@@ -4,11 +4,17 @@ updates:
     directory: /server
     schedule:
       interval: daily
+    commit-message:
+      prefix: "build"
+      prefix-development: "build"
 
   - package-ecosystem: npm
     directory: /client
     schedule:
       interval: daily
+    commit-message:
+      prefix: "build"
+      prefix-development: "build"
 
   - package-ecosystem: github-actions
     directory: /
