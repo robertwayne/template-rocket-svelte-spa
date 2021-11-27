@@ -1,8 +1,43 @@
 <style global style lang="postcss">
-  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,100&family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,100&display=swap');
-
   @tailwind base;
   @tailwind components;
 
   @tailwind utilities;
+
+  *:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+      all: unset;
+      display: revert;
+  }
+
+  *,
+  *::before,
+  *::after {
+      box-sizing: border-box;
+  }
+
+  body {
+    height: 100%;
+  }
+
+  ol, ul {
+      list-style: none;
+  }
+
+  img {
+      max-width: 100%;
+  }
+
+  table {
+      border-collapse: collapse;
+  }
+
+  textarea {
+      white-space: revert;
+  }
+
+  :where([contenteditable]){
+      -webkit-user-modify: read-write;
+      overflow-wrap: break-word;
+      -webkit-line-break: after-white-space;
+  }
 </style>
