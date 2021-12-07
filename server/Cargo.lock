@@ -1313,7 +1313,7 @@ dependencies = [
 [[package]]
 name = "rocket-pg-sqlx"
 version = "0.1.0"
-source = "git+https://github.com/robertwayne/rocket-pg-sqlx#c9326059beaa485a98c0942e9bd697b8f3d693df"
+source = "git+https://github.com/robertwayne/rocket-pg-sqlx#9f21a304f2f81aadcfeddee22eb6cdc7db83a176"
 dependencies = [
  "rocket",
  "sqlx",
