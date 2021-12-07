@@ -1,5 +1,3 @@
-cargo-features = [ "edition2021" ]
-
 [package]
 name = "backend"
 authors = ["Rob Wagner <rob@sombia.com>"]
