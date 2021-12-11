@@ -1,6 +1,5 @@
 {
   "rust-analyzer.updates.channel": "nightly",
-  "rust-analyzer.updates.askBeforeDownload": false,
   "prettier.enable": true,
   "editor.formatOnSave": true,
   "[typescript]": {
@@ -9,7 +8,14 @@
   },
   "[svelte]": {
     "editor.inlayHints.enabled": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "matklad.rust-analyzer"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "bradymholt.pgformatter",
+    "editor.formatOnSave": false
   },
   "sort-imports.on-save": true,
   "sort-imports.languages": ["javascript", "typescript"]
