@@ -3,9 +3,11 @@
 This is a base template for my current ideal web stack.
 
 ### Server Core Tech
+
 Rust, Rocket, SQLx, PostgreSQL
 
 ### Client Core Tech
+
 Svelte, TailwindCSS, ESLint, Prettier, Vite
 
 ## Scripts
