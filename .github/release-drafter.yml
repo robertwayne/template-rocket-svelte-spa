@@ -5,6 +5,7 @@ categories:
   - title: '🐛 Bug Fixes'
     labels:
       - 'fix'
+      - 'revert'
   - title: '⚡ Performance'
     labels:
       - 'perf'
@@ -14,6 +15,9 @@ categories:
       - 'style'
       - 'docs'
       - 'refactor'
+      - 'test'
+      - 'chore'
+      - 'ci'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&'
 template: |
