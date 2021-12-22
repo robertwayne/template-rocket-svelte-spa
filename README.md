@@ -10,7 +10,7 @@ The server builds against the Rocket 0.5 release candidate.
 
 ## Client Core Tech
 
-Svelte, svelte-navigator, TailwindCSS v3, ESLint, Prettier, Vite
+Svelte, svelte-navigator, TailwindCSS v3, Jest, ESLint, Prettier, Vite
 
 ## Scripts
 
