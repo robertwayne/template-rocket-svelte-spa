@@ -15,3 +15,4 @@ sqlx = { version = "0.5.9", features = [
 dotenv = "0.15.0"
 rocket-pg-sqlx = { version = "0.1", git = "https://github.com/robertwayne/rocket-pg-sqlx" }
 anyhow = "1"
+rocket_async_compression = "0.1"
