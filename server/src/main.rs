@@ -5,8 +5,10 @@ extern crate rocket;
 
 use dotenv::dotenv;
 use relative_path::RelativePath;
-use rocket::{fs::NamedFile, http::Method};
+use rocket::{fs::NamedFile, http::Method, shield::Shield};
 use rocket_cors::AllowedOrigins;
+
+use rocket_async_compression::Compression;
 
 use rocket_pg_sqlx::postgres_fairing;
 use std::{env, path::PathBuf};
@@ -54,9 +56,13 @@ fn rocket() -> _ {
     .to_cors()
     .expect("Failed to construct CORS option struct.");
 
+    let shield = Shield::default();
+
     rocket::build()
-        .attach(postgres_fairing())
         .attach(cors)
+        .attach(shield)
+        .attach(Compression::fairing())
+        .attach(postgres_fairing())
         .mount("/assets", routes![static_files])
         .mount("/", routes![index])
 }
