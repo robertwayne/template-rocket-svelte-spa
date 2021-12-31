@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.31",
-    "@types/jest": "^27.0.3",
+    "@types/jest": "^27.4.0",
     "@types/jsdom": "^16.2.14",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
