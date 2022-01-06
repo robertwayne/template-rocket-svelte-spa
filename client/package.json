@@ -16,7 +16,7 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.31",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.34",
     "@types/jest": "^27.0.3",
     "@types/jsdom": "^16.2.14",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
