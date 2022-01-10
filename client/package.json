@@ -19,7 +19,7 @@
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.34",
     "@types/jest": "^27.4.0",
     "@types/jsdom": "^16.2.14",
-    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.7.0",
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.0.12",
