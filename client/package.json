@@ -26,7 +26,7 @@
     "dotenv": "^10.0.0",
     "eslint": "^8.6.0",
     "eslint-plugin-svelte3": "^3.3.0",
-    "jest": "^27.4.5",
+    "jest": "^27.4.7",
     "jsdom": "^19.0.0",
     "postcss": "^8.4.5",
     "postcss-load-config": "^3.1.0",
