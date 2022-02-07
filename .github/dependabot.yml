@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: cargo
     directory: /server
     schedule:
-      interval: daily
+      interval: weekly
     commit-message:
       prefix: "build"
       prefix-development: "build"
@@ -11,7 +11,7 @@ updates:
   - package-ecosystem: npm
     directory: /client
     schedule:
-      interval: daily
+      interval: weekly
     commit-message:
       prefix: "build"
       prefix-development: "build"
@@ -19,7 +19,7 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: daily
+      interval: weekly
     commit-message:
       prefix: "build"
       prefix-development: "build"
