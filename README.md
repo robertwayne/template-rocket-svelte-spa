@@ -30,6 +30,4 @@ Svelte, svelte-navigator, TailwindCSS v3, Jest, ESLint, Prettier, Vite
 - Requires environment options set to connect to a PostgreSQL.
 - Expects Rust to be on the nightly compiler.
 - Expects migrations with `sqlx migrate`.
-- Uses my preferred VSCode settings file. You should remove this.
-- Uses Dependabot, Semantic Pull Request, and Release Drafter actions.
-- License can be removed - it's just for personal ease-of-use.
+- Uses a dependabot workflow.
