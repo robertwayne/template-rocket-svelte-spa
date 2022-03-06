@@ -1,4 +1,18 @@
-node_modules
-target
+# Directories
 dist
+build
+target
+node_modules
+
+# Files
+Cargo.lock
+yarn.lock
+
+# Config Files
 .env
+.cargo/config
+.cargo/config.toml
+
+# User Settings
+.vscode
+.idea
