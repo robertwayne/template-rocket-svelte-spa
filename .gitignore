@@ -7,6 +7,7 @@ node_modules
 # Files
 Cargo.lock
 yarn.lock
+.log
 
 # Config Files
 .env
