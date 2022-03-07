@@ -31,3 +31,4 @@ Svelte, svelte-navigator, TailwindCSS v3, Jest, ESLint, Prettier, Vite
 - Expects Rust to be on the nightly compiler.
 - Expects migrations with `sqlx migrate`.
 - Uses a dependabot workflow.
+- Works with yarn v2 (berry).
