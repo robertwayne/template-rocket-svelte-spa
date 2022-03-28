@@ -7,7 +7,7 @@ edition = "2021"
 [dependencies]
 rocket = { version = "0.5.0-rc.1", features = ["json", "secrets"] }
 rocket_cors = "0.6.0-alpha1"
-relative-path = "1.6"
+relative-path = "1.7"
 sqlx = { version = "0.5", features = [
     "runtime-tokio-rustls",
     "postgres",
