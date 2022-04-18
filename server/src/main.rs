@@ -64,5 +64,6 @@ fn rocket() -> _ {
         .attach(Compression::fairing())
         .attach(postgres_fairing())
         .mount("/assets", routes![static_files])
+        .mount("/robots.txt", routes![static_files])
         .mount("/", routes![index])
 }

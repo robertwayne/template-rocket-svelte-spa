@@ -1,8 +1,8 @@
 <script lang="ts">
-    import { Link } from 'svelte-navigator'
+    import { Link } from "svelte-navigator"
 </script>
 
-<nav class="font-bold flex flex-row justify-between">
+<nav class="flex flex-row justify-between font-bold">
     <h1>Template App</h1>
     <ul class="flex flex-row">
         <li class="px-2">
