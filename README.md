@@ -16,13 +16,13 @@ Svelte, svelte-navigator, TailwindCSS v3, Jest, ESLint, Prettier, Vite
 
 | Command | Action |
 |---------|--------|
-| yarn dev | Runs development version with Vite. |
-| yarn build | Builds out to path specified in .env - server uses CARGO_MANIFEST dir as expected location. |
-| yarn serve | Runs Vite preview. |
-| yarn fmt | Runs prettier on JS, TS, and Svelte files. |
-| yarn lint | Runs eslint on JS, TS, and Svelte files. |
-| yarn lint:fix | Runs eslint with --fix on JS, TS, and Svelte files. |
-| yarn test | Runs jest w/ support for ESM and TypeScript. |
+| npm run dev | Runs development version with Vite. |
+| npm run build | Builds out to path specified in .env - server uses CARGO_MANIFEST dir as expected location. |
+| npm run serve | Runs Vite preview. |
+| npm run fmt | Runs prettier on JS, TS, and Svelte files. |
+| npm run lint | Runs eslint on JS, TS, and Svelte files. |
+| npm run lint:fix | Runs eslint with --fix on JS, TS, and Svelte files. |
+| npm run test | Runs jest w/ support for ESM and TypeScript. |
 
 ## Notes
 
@@ -31,4 +31,3 @@ Svelte, svelte-navigator, TailwindCSS v3, Jest, ESLint, Prettier, Vite
 - Expects Rust to be on the nightly compiler.
 - Expects migrations with `sqlx migrate`.
 - Uses a dependabot workflow.
-- Works with yarn v2 (berry).
