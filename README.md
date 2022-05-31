@@ -1,16 +1,20 @@
-# New Project
+# Template: Rocket + Svelte
 
-This is a base template for my current web stack.
+This is a base template for my current web stack. On the backend, it uses [Rocket](https://rocket.rs) and [PostgreSQL](https://www.postgresql.org). On the frontend, it uses [Svelte](https://svelte.dev), [TypeScript](https://www.typescriptlang.org) and [Tailwind CSS](https://tailwindcss.com).
 
-## Server Core Tech
-
-Rust, Rocket, SQLx, PostgreSQL
-
-The server builds against the Rocket 0.5 release candidate.
+*Note: This template is built against the latest Rocket release candidate (rc2 at the time of writing) and Rust nightly 1.63+.*
 
 ## Client Core Tech
 
 Svelte, svelte-navigator, TailwindCSS v3, Jest, ESLint, Prettier, Vite
+
+## Usage
+
+1. Clone the repository: `git clone https://github.com/robertwayne/template-rocket-svelte-spa`
+2. Change `.env.TEMPLATE` to `.env` and set your Postgres credentials (if not using defaults).
+3. Run the server with `cargo run` from inside the `/server` directory.
+4. You should build the client initially with `npm run build` from inside the `/client` directory. After that, you can use `npm run dev` for hot reloading.
+5. If you're serving from the server, visit `http://localhost:8000` in your browser. If you're using npm dev, visit `http://localhost:3000` in your browser.
 
 ## Scripts
 
@@ -26,8 +30,5 @@ Svelte, svelte-navigator, TailwindCSS v3, Jest, ESLint, Prettier, Vite
 
 ## Notes
 
-- Has unsecure CORS settings meant for debugging.
-- Requires environment options set to connect to a PostgreSQL.
+- Requires environment options set to connect to a PostgreSQL. You can remove the fairing in `main.rs` to skip using Postgres.
 - Expects Rust to be on the nightly compiler.
-- Expects migrations with `sqlx migrate`.
-- Uses a dependabot workflow.
