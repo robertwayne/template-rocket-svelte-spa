@@ -1,6 +1,6 @@
 # Template: Rocket + Svelte
 
-This is a base template for my current web stack. On the backend, it uses [Rocket](https://rocket.rs) and [PostgreSQL](https://www.postgresql.org). On the frontend, it uses [Svelte](https://svelte.dev), [TypeScript](https://www.typescriptlang.org) and [Tailwind CSS](https://tailwindcss.com).
+This is a base template for my current web stack. On the backend, it uses [Rocket](https://rocket.rs) and [PostgreSQL](https://www.postgresql.org). On the frontend, it uses [Svelte](https://svelte.dev), [TypeScript](https://www.typescriptlang.org) and [Tailwind CSS](https://tailwindcss.com). Additional major dependencies include: ESLint, Prettier, Jest, Vite, and svelte-navigator.
 
 *Note: This template is built against the latest Rocket release candidate (rc2 at the time of writing) and Rust nightly 1.63+.*
 
