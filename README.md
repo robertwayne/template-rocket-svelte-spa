@@ -4,10 +4,6 @@ This is a base template for my current web stack. On the backend, it uses [Rocke
 
 *Note: This template is built against the latest Rocket release candidate (rc2 at the time of writing) and Rust nightly 1.63+.*
 
-## Client Core Tech
-
-Svelte, svelte-navigator, TailwindCSS v3, Jest, ESLint, Prettier, Vite
-
 ## Usage
 
 1. Clone the repository: `git clone https://github.com/robertwayne/template-rocket-svelte-spa`
