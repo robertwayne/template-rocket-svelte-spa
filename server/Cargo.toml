@@ -5,14 +5,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-rocket = { version = "0.5.0-rc.1", features = ["json", "secrets"] }
-rocket_cors = "0.6.0-alpha1"
+rocket = { version = "0.5.0-rc.2", features = ["json", "secrets"] }
 relative-path = "1.6"
-sqlx = { version = "0.5", features = [
-    "runtime-tokio-rustls",
-    "postgres",
-] }
+sqlx = { version = "0.5", features = ["runtime-tokio-rustls", "postgres"] }
 dotenv = "0.15"
-rocket-pg-sqlx = { version = "0.1", git = "https://github.com/robertwayne/rocket-pg-sqlx" }
 anyhow = "1"
-rocket_async_compression = "0.1"
