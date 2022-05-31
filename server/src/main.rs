@@ -1,16 +1,17 @@
 #![forbid(unsafe_code)]
 
+mod cors;
+mod postgres;
+
 #[macro_use]
 extern crate rocket;
 
+use cors::Cors;
 use dotenv::dotenv;
+use postgres::Postgres;
 use relative_path::RelativePath;
-use rocket::{fs::NamedFile, http::Method, shield::Shield};
-use rocket_cors::AllowedOrigins;
+use rocket::{fs::NamedFile, shield::Shield};
 
-use rocket_async_compression::Compression;
-
-use rocket_pg_sqlx::postgres_fairing;
 use std::{env, path::PathBuf};
 
 fn get_root_path() -> PathBuf {
@@ -35,34 +36,10 @@ async fn static_files(file: PathBuf) -> Option<NamedFile> {
 fn rocket() -> _ {
     dotenv().ok();
 
-    let allowed_origins = AllowedOrigins::All;
-
-    let cors = rocket_cors::CorsOptions {
-        allowed_origins,
-        allowed_methods: vec![
-            Method::Get,
-            Method::Delete,
-            Method::Put,
-            Method::Patch,
-            Method::Post,
-        ]
-        .into_iter()
-        .map(From::from)
-        .collect(),
-        allowed_headers: rocket_cors::AllowedHeaders::all(),
-        allow_credentials: true,
-        ..Default::default()
-    }
-    .to_cors()
-    .expect("Failed to construct CORS option struct.");
-
-    let shield = Shield::default();
-
     rocket::build()
-        .attach(cors)
-        .attach(shield)
-        .attach(Compression::fairing())
-        .attach(postgres_fairing())
+        .attach(Cors::default())
+        .attach(Shield::default())
+        .attach(Postgres::default())
         .mount("/assets", routes![static_files])
         .mount("/robots.txt", routes![static_files])
         .mount("/", routes![index])
