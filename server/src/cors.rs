@@ -32,7 +32,9 @@ impl Fairing for Cors {
             "Access-Control-Allow-Methods",
             "DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT",
         ));
+        response.set_header(Header::new("Vary", "Origin"));
         response.set_header(Header::new("Access-Control-Allow-Credentials", "true"));
+        response.set_header(Header::new("Access-Control-Max-Age", "86400"));
 
         if request.method() == Method::Options {
             response.set_status(Status::NoContent);
