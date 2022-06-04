@@ -2,7 +2,7 @@ use std::env;
 
 use rocket::{
     fairing::{self, Fairing},
-    http::Header,
+    http::{Header, Method, Status},
     Request, Response,
 };
 
@@ -19,7 +19,7 @@ impl Fairing for Cors {
         }
     }
 
-    async fn on_response<'r>(&self, _request: &'r Request<'_>, response: &mut Response<'r>) {
+    async fn on_response<'r>(&self, request: &'r Request<'_>, response: &mut Response<'r>) {
         response.set_header(Header::new(
             "Access-Control-Allow-Origin",
             env::var("CORS_ORIGIN").unwrap_or_else(|_| "http://127.0.0.1:8000".to_string()),
@@ -33,5 +33,9 @@ impl Fairing for Cors {
             "DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT",
         ));
         response.set_header(Header::new("Access-Control-Allow-Credentials", "true"));
+
+        if request.method() == Method::Options {
+            response.set_status(Status::NoContent);
+        }
     }
 }
