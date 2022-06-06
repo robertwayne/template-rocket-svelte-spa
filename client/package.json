@@ -44,7 +44,7 @@
         "@types/offscreencanvas": "^2019.7.0",
         "prettier-plugin-tailwindcss": "^0.1.11",
         "svelte": "^3.48.0",
-        "svelte-navigator": "^3.1.5",
+        "svelte-navigator": "^3.1.6",
         "terser": "^5.14.0"
     }
 }
