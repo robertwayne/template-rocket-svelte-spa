@@ -1,15 +1,13 @@
 <script lang="ts">
-    import type { SvelteComponent } from "svelte"
-    import { Route, Router } from "svelte-navigator"
+    import { Router } from "svelte-navigator"
+    import AsyncRoute from "./components/AsyncRoute.svelte"
     import Footer from "./components/Footer.svelte"
     import Nav from "./components/Nav.svelte"
-    import About from "./routes/About.svelte"
-    import Home from "./routes/Home.svelte"
     import Tailwind from "./Tailwind.svelte"
 
-    const routes: { [key: string]: typeof SvelteComponent } = {
-        "/": Home,
-        "/about": About,
+    const routes = {
+        "/": () => import("./routes/Home.svelte"),
+        "/about": () => import("./routes/About.svelte"),
     }
 </script>
 
@@ -23,7 +21,7 @@
     <main class="flex w-full flex-grow justify-center">
         <Router>
             {#each Object.entries(routes) as [path, component]}
-                <Route {path} {component} />
+                <AsyncRoute {path} {component}>Loading...</AsyncRoute>
             {/each}
         </Router>
     </main>
