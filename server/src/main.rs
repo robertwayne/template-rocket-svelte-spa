@@ -1,10 +1,11 @@
 #![forbid(unsafe_code)]
 
 mod cors;
+mod csp;
 mod postgres;
 
 #[macro_use]
-extern crate rocket;
+use csp::ContentSecurityPolicy;
 
 use cors::Cors;
 use dotenv::dotenv;
@@ -38,6 +39,7 @@ fn rocket() -> _ {
 
     rocket::build()
         .attach(Cors::default())
+        .attach(ContentSecurityPolicy::default())
         .attach(Shield::default())
         .attach(Postgres::default())
         .mount("/assets", routes![static_files])
