@@ -22,7 +22,7 @@ This is a base template for my current web stack. On the backend, it uses [Rocke
 | npm run fmt | Runs prettier on JS, TS, and Svelte files. |
 | npm run lint | Runs eslint on JS, TS, and Svelte files. |
 | npm run lint:fix | Runs eslint with --fix on JS, TS, and Svelte files. |
-| npm run test | Runs jest w/ support for ESM and TypeScript. |
+| npm run test | Runs tests via vitest. |
 
 ## Notes
 
