@@ -18,5 +18,11 @@ export default ({ mode }) => {
             https: false,
         },
         assetsDir: "static",
+        define: {
+            "import.meta.vitest": false,
+        },
+        test: {
+            includeSource: ["src/**/*.ts"],
+        },
     })
 }
