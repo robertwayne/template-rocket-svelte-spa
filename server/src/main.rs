@@ -1,13 +1,14 @@
 #![forbid(unsafe_code)]
 
+#[macro_use]
+extern crate rocket;
+
 mod cors;
 mod csp;
 mod postgres;
 
-#[macro_use]
+use cors::CrossOriginResourceSharing;
 use csp::ContentSecurityPolicy;
-
-use cors::Cors;
 use dotenv::dotenv;
 use postgres::Postgres;
 use relative_path::RelativePath;
@@ -15,6 +16,9 @@ use rocket::{fs::NamedFile, shield::Shield};
 
 use std::{env, path::PathBuf};
 
+/// Gets the root path of the directory containing client files after building
+/// with `npm run build`. By default, this is `/dist` from the directory with
+/// the `Cargo.toml` file.
 fn get_root_path() -> PathBuf {
     RelativePath::new("dist/").to_logical_path(env!("CARGO_MANIFEST_DIR"))
 }
@@ -38,7 +42,7 @@ fn rocket() -> _ {
     dotenv().ok();
 
     rocket::build()
-        .attach(Cors::default())
+        .attach(CrossOriginResourceSharing::default())
         .attach(ContentSecurityPolicy::default())
         .attach(Shield::default())
         .attach(Postgres::default())

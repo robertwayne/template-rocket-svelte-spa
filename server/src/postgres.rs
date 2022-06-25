@@ -5,10 +5,13 @@ use rocket::{
 use sqlx::{postgres::PgConnectOptions, PgPool};
 use std::env;
 
+/// Creates and attaches a Postgres connection pool to the global &State<T> in
+/// Rocket.
+///
+/// FIXME: Replace with built-in Rocket DB pools.
 #[derive(Debug, Default)]
 pub struct Postgres;
 
-/// Creates and attaches a Postgres connection pool to the global &State<T> in Rocket.
 #[rocket::async_trait]
 impl Fairing for Postgres {
     fn info(&self) -> fairing::Info {

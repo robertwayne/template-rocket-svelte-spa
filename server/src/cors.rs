@@ -6,15 +6,15 @@ use rocket::{
     Request, Response,
 };
 
+/// Attaches a CORS policy header to defined responses.
 #[derive(Debug, Default)]
-pub struct Cors;
+pub struct CrossOriginResourceSharing;
 
-/// Attaches CORS headers to all responses.
 #[rocket::async_trait]
-impl Fairing for Cors {
+impl Fairing for CrossOriginResourceSharing {
     fn info(&self) -> fairing::Info {
         fairing::Info {
-            name: "Cors",
+            name: "Cross-Origin Resource Sharing",
             kind: fairing::Kind::Response,
         }
     }
