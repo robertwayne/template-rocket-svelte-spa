@@ -13,30 +13,26 @@
         "fmt": "prettier --write --plugin-search-dir=. **/*.{js,ts,svelte,html,css,cjs,mjs,json}",
         "lint": "eslint src/**/*.{js,ts,svelte}",
         "lint:fix": "eslint --fix --fix-type problem,suggestion src/**/*.{js,ts,svelte}",
-        "test": "jest"
+        "test": "vitest"
     },
     "devDependencies": {
-        "@sveltejs/vite-plugin-svelte": "^1.0.0-next.46",
-        "@types/jest": "^27.5.1",
-        "@types/jsdom": "^16.2.14",
-        "@typescript-eslint/eslint-plugin": "^5.27.0",
-        "@typescript-eslint/parser": "^5.27.0",
+        "@sveltejs/vite-plugin-svelte": "^1.0.0-next.49",
+        "@typescript-eslint/eslint-plugin": "^5.29.0",
+        "@typescript-eslint/parser": "^5.29.0",
         "autoprefixer": "^10.4.7",
-        "cssnano": "^5.1.10",
+        "cssnano": "^5.1.12",
         "dotenv": "^16.0.1",
-        "eslint": "^8.16.0",
+        "eslint": "^8.18.0",
         "eslint-plugin-svelte3": "^4.0.0",
-        "jest": "^28.1.0",
-        "jsdom": "^19.0.0",
         "postcss": "^8.4.14",
-        "postcss-load-config": "^3.1.4",
-        "prettier": "^2.6.2",
-        "svelte-language-server": "^0.14.27",
-        "svelte-preprocess": "^4.10.6",
-        "tailwindcss": "^3.0.24",
-        "ts-jest": "^28.0.3",
-        "typescript": "^4.7.2",
-        "vite": "^2.9.9"
+        "postcss-load-config": "^4.0.1",
+        "prettier": "^2.7.1",
+        "svelte-language-server": "^0.14.28",
+        "svelte-preprocess": "^4.10.7",
+        "tailwindcss": "^3.1.4",
+        "typescript": "^4.7.4",
+        "vite": "^2.9.12",
+        "vitest": "^0.16.0"
     },
     "dependencies": {
         "@tailwindcss/forms": "^0.5.2",
@@ -44,7 +40,7 @@
         "@types/offscreencanvas": "^2019.7.0",
         "prettier-plugin-tailwindcss": "^0.1.11",
         "svelte": "^3.48.0",
-        "svelte-navigator": "^3.1.5",
-        "terser": "^5.14.0"
+        "svelte-navigator": "^3.1.6",
+        "terser": "^5.14.1"
     }
 }
