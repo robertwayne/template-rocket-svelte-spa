@@ -23,6 +23,10 @@
             {#each Object.entries(routes) as [path, component]}
                 <AsyncRoute {path} {component}>Loading...</AsyncRoute>
             {/each}
+            <AsyncRoute
+                path="*"
+                component={() => import("./routes/NotFound.svelte")}
+            />
         </Router>
     </main>
 
