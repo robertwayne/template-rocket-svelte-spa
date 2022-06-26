@@ -1,5 +1,3 @@
 <style global style lang="postcss">
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
+    /* Place global styles here. */
 </style>

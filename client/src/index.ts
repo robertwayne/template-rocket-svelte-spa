@@ -1,4 +1,5 @@
 import "../static/reset.css"
+import "./app.css"
 import "./hmr"
 
 import App from "./App.svelte"
