@@ -27,19 +27,19 @@
         "postcss": "^8.4.14",
         "postcss-load-config": "^4.0.1",
         "prettier": "^2.7.1",
-        "prettier-plugin-tailwindcss": "^0.1.11",
+        "prettier-plugin-tailwindcss": "^0.1.12",
         "svelte-language-server": "^0.14.29",
         "svelte-preprocess": "^4.10.7",
-        "tailwindcss": "^3.1.4",
+        "tailwindcss": "^3.1.5",
         "terser": "^5.14.1",
         "typescript": "^4.7.4",
-        "vite": "^2.9.13",
-        "vitest": "^0.17.0"
+        "vite": "^2.9.14",
+        "vitest": "^0.18.0"
     },
     "dependencies": {
         "@tailwindcss/forms": "^0.5.2",
-        "@tailwindcss/typography": "^0.5.2",
-        "svelte": "^3.48.0",
+        "@tailwindcss/typography": "^0.5.3",
+        "svelte": "^3.49.0",
         "svelte-navigator": "^3.1.6"
     }
 }
