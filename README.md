@@ -4,6 +4,12 @@ This is a base template for my current web stack. On the backend, it uses [Rocke
 
 *Note: This template is built against the latest Rocket release candidate (rc2 at the time of writing) and Rust nightly 1.64+.*
 
+## Server Notes
+
+* Contains a base fairing for handling CORS requests.
+* Contains a base fairing for an A++ Content Security Policy.
+* Expects to connect to a PostgreSQL database. Remove this fairing in `main.rs` if you don't need a database.
+
 ## Usage
 
 1. Clone the repository: `git clone https://github.com/robertwayne/template-rocket-svelte-spa`
@@ -23,8 +29,3 @@ This is a base template for my current web stack. On the backend, it uses [Rocke
 | npm run lint | Runs eslint on JS, TS, and Svelte files. |
 | npm run lint:fix | Runs eslint with --fix on JS, TS, and Svelte files. |
 | npm run test | Runs tests via vitest. |
-
-## Notes
-
-- Requires environment options set to connect to a PostgreSQL. You can remove the fairing in `main.rs` to skip using Postgres.
-- Expects Rust to be on the nightly compiler.
