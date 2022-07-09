@@ -10,6 +10,10 @@ This is a base template for my current web stack. On the backend, it uses [Rocke
 * Contains a base fairing for an A++ Content Security Policy.
 * Expects to connect to a PostgreSQL database. Remove this fairing in `main.rs` if you don't need a database.
 
+## Client Notes
+
+* Contains basic lazy route handlers for loading route content as it's needed.
+
 ## Usage
 
 1. Clone the repository: `git clone https://github.com/robertwayne/template-rocket-svelte-spa`
