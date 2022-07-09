@@ -23,6 +23,13 @@ fn get_root_path() -> PathBuf {
     RelativePath::new("dist/").to_logical_path(env!("CARGO_MANIFEST_DIR"))
 }
 
+#[get("/<_..>", rank = 0)]
+async fn robots() -> Option<NamedFile> {
+    NamedFile::open(get_root_path().join("robots.txt"))
+        .await
+        .ok()
+}
+
 #[get("/<_..>", rank = 2)]
 async fn index() -> Option<NamedFile> {
     NamedFile::open(get_root_path().join("index.html"))
@@ -46,7 +53,7 @@ fn rocket() -> _ {
         .attach(ContentSecurityPolicy::default())
         .attach(Shield::default())
         .attach(Postgres::default())
+        .mount("/robots.txt", routes![robots])
         .mount("/assets", routes![static_files])
-        .mount("/robots.txt", routes![static_files])
         .mount("/", routes![index])
 }
