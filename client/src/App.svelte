@@ -13,7 +13,7 @@
 
 <Tailwind />
 
-<div id="app" class="flex h-full w-full flex-col">
+<div id="app" class="flex h-full w-full flex-col p-2">
     <Router primary={false}>
         <Nav />
     </Router>
