@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Route } from "svelte-navigator"
-    import AsyncRouteGuard from "./AsyncRouteGuard.svelte"
+    import LazyRouteGuard from "./LazyRouteGuard.svelte"
     import type { RouteProps } from "svelte-navigator/types/Route"
     import type { SvelteComponentDev } from "svelte/internal"
     import type AnyObject from "svelte-navigator/types/AnyObject"
@@ -20,7 +20,7 @@
 </script>
 
 <Route {...props}>
-    <AsyncRouteGuard {component} {delay} let:focus>
+    <LazyRouteGuard {component} {delay} let:focus>
         <slot />
-    </AsyncRouteGuard>
+    </LazyRouteGuard>
 </Route>

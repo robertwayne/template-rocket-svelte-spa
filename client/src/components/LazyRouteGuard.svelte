@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { afterUpdate, onMount } from "svelte"
+    import { onMount } from "svelte"
     import { useFocus } from "svelte-navigator"
     import type { SvelteComponentDev } from "svelte/internal"
 
@@ -21,10 +21,10 @@
         props = restProps
     }
 
-    // Any page wrapped with this guard will be loaded asynchronously. During
-    // its load time, whatever component/text is in between the tags will be
-    // displayed (think loading animation / text). That loading 'content' will
-    // have a half-second delay so we don't have pages flashing content while
+    // Any page wrapped with this guard will be loaded lazil. During its load
+    // time, whatever component/text is in between the tags will be displayed
+    // (think loading animation / text). That loading 'content' will have a
+    // half-second delay so we don't have pages flashing content while
     // downloading their payload.
     onMount(() => {
         if (delay) {

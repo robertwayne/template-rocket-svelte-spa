@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Router } from "svelte-navigator"
-    import AsyncRoute from "./components/AsyncRoute.svelte"
+    import LazyRoute from "./components/LazyRoute.svelte"
     import Footer from "./components/Footer.svelte"
     import Nav from "./components/Nav.svelte"
     import Tailwind from "./Tailwind.svelte"
@@ -21,9 +21,9 @@
     <main class="flex w-full flex-grow justify-center">
         <Router>
             {#each Object.entries(routes) as [path, component]}
-                <AsyncRoute {path} {component}>Loading...</AsyncRoute>
+                <LazyRoute {path} {component}>Loading...</LazyRoute>
             {/each}
-            <AsyncRoute
+            <LazyRoute
                 path="*"
                 component={() => import("./routes/NotFound.svelte")}
             />
