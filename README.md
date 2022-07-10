@@ -7,7 +7,7 @@ This is a base template for my current web stack. On the backend, it uses [Rocke
 ## Server Notes
 
 * Contains a base fairing for handling CORS requests.
-* Contains a base fairing for an A++ Content Security Policy.
+* Contains a base fairing for a strong Content Security Policy.
 * Expects to connect to a PostgreSQL database. Remove this fairing in `main.rs` if you don't need a database.
 
 ## Client Notes
