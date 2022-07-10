@@ -5,6 +5,7 @@ export default ({ mode }) => {
     require("dotenv").config(".env")
 
     return defineConfig({
+        base: "/",
         plugins: [svelte()],
         build: {
             outDir: process.env.BUILD_PATH || "dist",
@@ -17,7 +18,6 @@ export default ({ mode }) => {
         server: {
             https: false,
         },
-        assetsDir: "static",
         define: {
             "import.meta.vitest": false,
         },
