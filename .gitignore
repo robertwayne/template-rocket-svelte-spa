@@ -19,8 +19,6 @@ Cargo.lock
 
 # Config Files
 .env
-.cargo/config
-.cargo/config.toml
 
 # User Settings
 .vscode
