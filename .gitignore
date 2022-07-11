@@ -16,8 +16,6 @@ node_modules
 # Files
 Cargo.lock
 .log
-
-# Config Files
 .env
 
 # User Settings
