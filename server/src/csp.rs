@@ -18,8 +18,6 @@ impl Fairing for ContentSecurityPolicy {
     }
 
     async fn on_response<'r>(&self, _request: &'r Request<'_>, response: &mut Response<'r>) {
-        // The included hashes are needed for `svelte-navigator`. Otherwise, it
-        // would not apply inline styles on naviagtion accessibility divs.
         response.set_header(
             Header::new("Content-Security-Policy",
     "default-src 'self'; script-src 'self'; script-src-elem 'self'; script-src-attr 'self'; style-src 'self'; style-src-elem 'self' 'unsafe-inline'; style-src-attr 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; media-src 'self'; object-src 'none'; prefetch-src 'self'; child-src 'none'; frame-src 'none'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests; base-uri 'self'; manifest-src 'self' data:"
