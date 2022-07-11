@@ -8,24 +8,24 @@ mod csp;
 mod postgres;
 
 use dotenv::dotenv;
-use relative_path::RelativePath;
-use rocket::{fs::NamedFile, shield::Shield};
+use rocket::{
+    fs::{relative, NamedFile},
+    shield::Shield,
+};
 
-use std::{env, path::PathBuf};
+use std::{
+    env,
+    path::{Path, PathBuf},
+};
 
 use crate::{cors::CrossOriginResourceSharing, csp::ContentSecurityPolicy, postgres::Postgres};
 
-/// Gets the root path of the directory containing client files after building
-/// with `npm run build`. By default, this is `/dist` from the directory with
-/// the `Cargo.toml` file.
-fn get_root_path() -> PathBuf {
-    RelativePath::new("dist/").to_logical_path(env!("CARGO_MANIFEST_DIR"))
-}
+const DIST: &str = relative!("dist");
 
 /// Matches against the robots.txt within the /dist root directory.
 #[get("/<_..>", rank = 0)]
 async fn robots() -> Option<NamedFile> {
-    NamedFile::open(get_root_path().join("robots.txt"))
+    NamedFile::open(Path::new(DIST).join("robots.txt"))
         .await
         .ok()
 }
@@ -33,7 +33,7 @@ async fn robots() -> Option<NamedFile> {
 /// Matches against any file within the /dist/assets directory.
 #[get("/<file..>", rank = 1)]
 async fn static_files(file: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(get_root_path().join("assets/").join(file))
+    NamedFile::open(Path::new(DIST).join("assets/").join(file))
         .await
         .ok()
 }
@@ -43,7 +43,7 @@ async fn static_files(file: PathBuf) -> Option<NamedFile> {
 /// time.
 #[get("/<_..>", rank = 2)]
 async fn index() -> Option<NamedFile> {
-    NamedFile::open(get_root_path().join("index.html"))
+    NamedFile::open(Path::new(DIST).join("index.html"))
         .await
         .ok()
 }
