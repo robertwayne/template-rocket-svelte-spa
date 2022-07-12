@@ -3,6 +3,7 @@
 #[macro_use]
 extern crate rocket;
 
+mod cache;
 mod cors;
 mod csp;
 mod postgres;
@@ -18,7 +19,10 @@ use std::{
     path::{Path, PathBuf},
 };
 
-use crate::{cors::CrossOriginResourceSharing, csp::ContentSecurityPolicy, postgres::Postgres};
+use crate::{
+    cache::CacheControl, cors::CrossOriginResourceSharing, csp::ContentSecurityPolicy,
+    postgres::Postgres,
+};
 
 const DIST: &str = relative!("dist");
 
@@ -53,6 +57,7 @@ fn rocket() -> _ {
     dotenv().ok();
 
     rocket::build()
+        .attach(CacheControl::default())
         .attach(ContentSecurityPolicy::default())
         .attach(CrossOriginResourceSharing::default())
         .attach(Postgres::default())
