@@ -5,10 +5,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+anyhow = "1"
+dotenv = "0.15"
 rocket = { version = "0.5.0-rc.2", features = ["json", "secrets"] }
 sqlx = { version = "0.6", features = ["runtime-tokio-rustls", "postgres"] }
-dotenv = "0.15"
-anyhow = "1"
 
 [profile.release]
 opt-level = 3
