@@ -17,12 +17,12 @@
     },
     "devDependencies": {
         "@sveltejs/vite-plugin-svelte": "^1.0.1",
-        "@typescript-eslint/eslint-plugin": "^5.30.6",
-        "@typescript-eslint/parser": "^5.30.6",
+        "@typescript-eslint/eslint-plugin": "^5.30.7",
+        "@typescript-eslint/parser": "^5.30.7",
         "autoprefixer": "^10.4.7",
         "cssnano": "^5.1.12",
         "dotenv": "^16.0.1",
-        "eslint": "^8.19.0",
+        "eslint": "^8.20.0",
         "eslint-plugin-svelte3": "^4.0.0",
         "postcss": "^8.4.14",
         "postcss-load-config": "^4.0.1",
@@ -33,8 +33,8 @@
         "tailwindcss": "^3.1.6",
         "terser": "^5.14.2",
         "typescript": "^4.7.4",
-        "vite": "^3.0.0",
-        "vitest": "^0.18.0"
+        "vite": "^3.0.2",
+        "vitest": "^0.18.1"
     },
     "dependencies": {
         "@tailwindcss/forms": "^0.5.2",
