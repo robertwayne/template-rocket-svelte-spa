@@ -49,4 +49,4 @@
 
 | Command | Action |
 |---------|--------|
-| ./update.sh | Updates the dependencies of both the client and server projects. | 
+| ./update.sh | Updates the dependencies of both the client and server projects. |
