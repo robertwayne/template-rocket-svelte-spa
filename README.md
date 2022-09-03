@@ -46,3 +46,9 @@ This is a generic template for an SPA using Rocket and Svelte.
 | npm run lint | Runs `eslint` on JS, TS, and Svelte files. |
 | npm run lint:fix | Runs `eslint` with --fix on JS, TS, and Svelte files. |
 | npm run test | Runs `vitest`. |
+
+## Misc Scripts
+
+| Command | Action |
+|---------|--------|
+| ./update.sh | Updates the dependencies of both the client and server projects. | 
