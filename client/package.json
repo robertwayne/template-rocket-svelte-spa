@@ -16,12 +16,12 @@
         "test": "vitest"
     },
     "devDependencies": {
-        "@sveltejs/vite-plugin-svelte": "^1.0.2",
-        "@typescript-eslint/eslint-plugin": "^5.36.0",
-        "@typescript-eslint/parser": "^5.36.0",
+        "@sveltejs/vite-plugin-svelte": "^1.0.4",
+        "@typescript-eslint/eslint-plugin": "^5.36.1",
+        "@typescript-eslint/parser": "^5.36.1",
         "autoprefixer": "^10.4.8",
         "cssnano": "^5.1.13",
-        "dotenv": "^16.0.1",
+        "dotenv": "^16.0.2",
         "eslint": "^8.23.0",
         "eslint-plugin-svelte3": "^4.0.0",
         "postcss": "^8.4.16",
@@ -37,9 +37,9 @@
         "vitest": "^0.22.1"
     },
     "dependencies": {
-        "@tailwindcss/forms": "^0.5.2",
-        "@tailwindcss/typography": "^0.5.4",
-        "svelte": "^3.49.0",
+        "@tailwindcss/forms": "^0.5.3",
+        "@tailwindcss/typography": "^0.5.7",
+        "svelte": "^3.50.0",
         "svelte-navigator": "^3.2.2"
     }
 }
