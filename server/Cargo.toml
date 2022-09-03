@@ -1,5 +1,5 @@
 [package]
-name = "backend"
+name = "server"
 authors = ["Rob Wagner <rob@sombia.com>"]
 version = "0.1.0"
 edition = "2021"
