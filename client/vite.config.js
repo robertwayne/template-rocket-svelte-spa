@@ -10,7 +10,6 @@ export default ({ mode }) => {
         build: {
             outDir: process.env.BUILD_PATH || "dist",
             emptyOutDir: true,
-            minify: "terser",
         },
         optimizeDeps: {
             exclude: ["svelte-navigator"],
