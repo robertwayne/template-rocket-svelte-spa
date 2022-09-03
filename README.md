@@ -1,7 +1,5 @@
 # Template: Rocket + Svelte SPA
 
-This is a generic template for an SPA using Rocket and Svelte.
-
 ## Backend
 
 - [Rocket](https://rocket.rs)
