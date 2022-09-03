@@ -8,7 +8,7 @@ mod cors;
 mod csp;
 mod postgres;
 
-use dotenv::dotenv;
+use dotenvy::dotenv;
 use rocket::{
     fs::{relative, NamedFile},
     shield::Shield,
