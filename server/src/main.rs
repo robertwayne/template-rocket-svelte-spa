@@ -29,17 +29,13 @@ const DIST: &str = relative!("dist");
 /// Matches against the robots.txt within the /dist root directory.
 #[get("/<_..>", rank = 0)]
 async fn robots() -> Option<NamedFile> {
-    NamedFile::open(Path::new(DIST).join("robots.txt"))
-        .await
-        .ok()
+    NamedFile::open(Path::new(DIST).join("robots.txt")).await.ok()
 }
 
 /// Matches against any file within the /dist/assets directory.
 #[get("/<file..>", rank = 1)]
 async fn static_files(file: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(Path::new(DIST).join("assets/").join(file))
-        .await
-        .ok()
+    NamedFile::open(Path::new(DIST).join("assets/").join(file)).await.ok()
 }
 
 /// Matches against the index.html file within the /dist directory. This is the
@@ -47,9 +43,7 @@ async fn static_files(file: PathBuf) -> Option<NamedFile> {
 /// time.
 #[get("/<_..>", rank = 2)]
 async fn index() -> Option<NamedFile> {
-    NamedFile::open(Path::new(DIST).join("index.html"))
-        .await
-        .ok()
+    NamedFile::open(Path::new(DIST).join("index.html")).await.ok()
 }
 
 #[launch]

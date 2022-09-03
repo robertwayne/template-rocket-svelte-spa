@@ -11,10 +11,7 @@ pub struct ContentSecurityPolicy;
 #[rocket::async_trait]
 impl Fairing for ContentSecurityPolicy {
     fn info(&self) -> fairing::Info {
-        fairing::Info {
-            name: "Content Security Policy",
-            kind: fairing::Kind::Response,
-        }
+        fairing::Info { name: "Content Security Policy", kind: fairing::Kind::Response }
     }
 
     async fn on_response<'r>(&self, _request: &'r Request<'_>, response: &mut Response<'r>) {
