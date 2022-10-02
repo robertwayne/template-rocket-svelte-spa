@@ -23,7 +23,7 @@
 
 ## Client Notes
 
-- Contains lazy route handlers for loading routes asyncrounsly as needed.
+- Contains lazy route handlers for loading routes asyncronously.
 
 ## Usage
 
