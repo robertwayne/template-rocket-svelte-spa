@@ -25,6 +25,12 @@
 
 - Contains lazy route handlers for loading routes asyncronously.
 
+## GitHub Action Notes
+
+- Runs (client) tests, eslint, tsc, and prettier on PRs.
+- Runs dependabot weekly. You can manually run `combine` to squish all dependabot PRs into one PR.
+- Server tests/formatting are not run on PR (yet).
+
 ## Usage
 
 1. Clone the repository: `git clone https://github.com/robertwayne/template-rocket-svelte-spa`
