@@ -10,16 +10,16 @@
 - [Svelte](https://svelte.dev)
 - [TypeScript](https://www.typescriptlang.org)
 - [Tailwind CSS](https://tailwindcss.com)
-- [Vite](https://vitejs.dev/)
+- [Vite](https://vitejs.dev/) + [Vitest](https://vitest.dev/)
 - [svelte-navigator](https://github.com/mefechoel/svelte-navigator) *(client-side routing)*
 
-*Note: This template is built & tested against the latest Rocket release candidate (rc2 at the time of writing) and Rust nightly 1.65+.*
+*Note: This template is built & tested against the latest Rocket release candidate (rc2 at the time of writing) and Rust nightly 1.66+.*
 
 ## Server Notes
 
 - Contains a simple fairing for handling CORS requests.
 - Contains a simple fairing for a Content Security Policy.
-- Expects to connect to a PostgreSQL database. Remove this fairing in `main.rs` if you don't need a database.
+- **Expects to connect to a PostgreSQL database**. Remove this fairing in `main.rs` if you don't need a database.
 
 ## Client Notes
 
@@ -43,7 +43,10 @@
 | npm run fmt | Runs `prettier` on JS, TS, and Svelte files. |
 | npm run lint | Runs `eslint` on JS, TS, and Svelte files. |
 | npm run lint:fix | Runs `eslint` with --fix on JS, TS, and Svelte files. |
-| npm run test | Runs `vitest`. |
+| npm run tsc | Runs `tsc --noEmit` on TS files. |
+| npm run tsc:watch | Runs `tsc --noEmit --watch` on TS files. |
+| npm run test | Runs `vitest` once. |
+| npm run test:watch | Runs `vitest` in watch mode. |
 
 ## Misc Scripts
 
