@@ -22,6 +22,8 @@ export default ({ mode }) => {
         },
         test: {
             includeSource: ["src/**/*.ts"],
+            globals: true,
+            environment: "happy-dom",
         },
     })
 }
