@@ -33,6 +33,6 @@
 
         "types": ["vitest/importMeta", "vite/client"]
     },
-    "include": ["src/**/*", ".d.ts"],
+    "include": ["src/**/*", "*.d.ts"],
     "exclude": ["node_modules"]
 }
