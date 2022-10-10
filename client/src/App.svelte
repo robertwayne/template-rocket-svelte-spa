@@ -3,15 +3,12 @@
     import LazyRoute from "./components/LazyRoute.svelte"
     import Footer from "./components/Footer.svelte"
     import Nav from "./components/Nav.svelte"
-    import Tailwind from "./Tailwind.svelte"
 
     const routes = {
         "/": () => import("./routes/Home.svelte"),
         "/about": () => import("./routes/About.svelte"),
     }
 </script>
-
-<Tailwind />
 
 <div id="app" class="flex h-full w-full flex-col p-2">
     <Router primary={false}>
