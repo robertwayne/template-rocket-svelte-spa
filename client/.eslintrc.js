@@ -14,14 +14,28 @@ module.exports = {
                 "plugin:@typescript-eslint/recommended",
             ],
             rules: {
+                "@typescript-eslint/array-type": [
+                    "error",
+                    {
+                        default: "generic",
+                    },
+                ],
                 "no-undef": "off",
-                "unused-imports/no-unused-imports": "error",
             },
         },
         {
             files: ["*.ts"],
-            extends: ["plugin:@typescript-eslint/recommended"],
+            extends: [
+                "eslint:recommended",
+                "plugin:@typescript-eslint/recommended",
+            ],
             rules: {
+                "@typescript-eslint/array-type": [
+                    "error",
+                    {
+                        default: "generic",
+                    },
+                ],
                 "no-undef": "off",
             },
         },
