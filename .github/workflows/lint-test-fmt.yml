@@ -1,18 +1,22 @@
+name: 'Lint, Test, and Format'
 on:
   pull_request:
+  workflow_dispatch:
 
 jobs:
-  check:
+  lint-test-format:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: client
+        working-directory: ./client
     steps:
       - uses: actions/checkout@v3
+        
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
       - run: npm ci
       - run: npm run lint:fix
       - run: npm run tsc
