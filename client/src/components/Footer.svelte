@@ -8,7 +8,7 @@
             <a
                 href="https://github.com/robertwayne/template-rocket-svelte-spa"
                 target="_blank"
-                rel="noopener">GitHub</a
+                rel="noopener noreferrer">GitHub</a
             >
         </li>
     </ul>
