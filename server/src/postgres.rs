@@ -2,7 +2,7 @@ use rocket::{
     fairing::{self, Fairing},
     Build, Rocket,
 };
-use sqlx::{postgres::PgConnectOptions, PgPool};
+use sqlx::PgPool;
 use std::env;
 
 /// Creates and attaches a Postgres connection pool to the global &State<T> in
@@ -19,21 +19,9 @@ impl Fairing for Postgres {
     }
 
     async fn on_ignite(&self, rocket: Rocket<Build>) -> fairing::Result {
-        let pool = PgPool::connect_with({
-            PgConnectOptions::new()
-                .host(env::var("PGHOST").unwrap_or_else(|_| "localhost".into()).as_str())
-                .port(
-                    env::var("PGPORT")
-                        .unwrap_or_else(|_| "5432".into())
-                        .parse::<u16>()
-                        .unwrap_or_default(),
-                )
-                .username(env::var("PGUSER").unwrap_or_else(|_| "postgres".into()).as_str())
-                .password(env::var("PGPASS").unwrap_or_else(|_| "postgres".into()).as_str())
-                .database(env::var("PGDBNAME").unwrap_or_else(|_| "postgres".into()).as_str())
-        })
-        .await
-        .expect("Failed to connect to PostgreSQL database.");
+        let url = env::var("DATABASE_URL").expect("DATABASE_URL must be set");
+        let pool =
+            PgPool::connect(url.as_str()).await.expect("Failed to connect to PostgreSQL database.");
 
         Ok(rocket.manage(pool))
     }
