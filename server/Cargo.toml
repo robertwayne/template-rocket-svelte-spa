@@ -1,6 +1,7 @@
 [package]
 name = "server"
 authors = ["Rob Wagner <rob@sombia.com>"]
+repository = "https://github.com/robertwayne/template-rocket-svelte-spa"
 version = "0.1.0"
 edition = "2021"
 
