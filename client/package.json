@@ -1,8 +1,7 @@
 {
     "name": "client",
     "version": "0.1.0",
-    "description": "",
-    "repository": "",
+    "repository": "https://github.com/robertwayne/template-rocket-svelte-spa",
     "author": "Rob Wagner <rob@sombia.com>",
     "license": "MIT OR Apache-2.0",
     "private": true,
