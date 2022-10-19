@@ -21,6 +21,6 @@
 
 <Route {...props}>
     <LazyRouteGuard {component} {delay} let:focus>
-        <slot />
+        <slot {focus} />
     </LazyRouteGuard>
 </Route>
