@@ -1,2 +1,5 @@
+[default]
+port = 8000
+
 [release]
 secret_key = ""
