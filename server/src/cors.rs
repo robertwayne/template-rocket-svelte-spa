@@ -19,7 +19,7 @@ impl Fairing for CrossOriginResourceSharing {
     async fn on_response<'r>(&self, request: &'r Request<'_>, response: &mut Response<'r>) {
         response.set_header(Header::new(
             "Access-Control-Allow-Origin",
-            env::var("CORS_ORIGIN").unwrap_or_else(|_| "http://127.0.0.1:8000".to_string()),
+            env::var("CORS_ORIGIN").unwrap_or_else(|_| "http://localhost:5173".to_string()),
         ));
         response.set_header(Header::new("Access-Control-Allow-Headers", "Accept, Content-Type"));
         response.set_header(Header::new(
