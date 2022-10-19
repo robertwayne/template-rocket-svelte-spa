@@ -1,4 +1,4 @@
-import "../static/reset.css"
+import "./reset.css"
 import "./app.css"
 import "./hmr"
 
