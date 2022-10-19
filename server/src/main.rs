@@ -13,6 +13,7 @@ use rocket::{
     fs::{relative, NamedFile},
     shield::Shield,
 };
+use tracing_subscriber::EnvFilter;
 
 use std::{
     env,
@@ -49,6 +50,7 @@ async fn index() -> Option<NamedFile> {
 #[launch]
 fn rocket() -> _ {
     dotenv().ok();
+    tracing_subscriber::fmt().with_env_filter(EnvFilter::from_default_env()).init();
 
     rocket::build()
         .attach(CacheControl::default())
