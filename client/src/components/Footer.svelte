@@ -12,5 +12,5 @@
             >
         </li>
     </ul>
-    <span>© {year} Rob Wagner</span>
+    <span>© {year} Name / Company</span>
 </footer>
