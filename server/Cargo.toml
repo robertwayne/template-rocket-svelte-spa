@@ -5,10 +5,15 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-anyhow = "1"
 dotenvy = "0.15"
 rocket = { version = "0.5.0-rc.2", features = ["json", "secrets"] }
 sqlx = { version = "0.6", features = ["runtime-tokio-rustls", "postgres"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = [
+    "time",
+    "env-filter",
+    "local-time",
+] }
 
 [profile.release]
 opt-level = 3
