@@ -29,7 +29,7 @@
         "happy-dom": "^7.7.0",
         "postcss": "^8.4.19",
         "postcss-load-config": "^4.0.1",
-        "prettier": "^2.7.1",
+        "prettier": "^2.8.0",
         "prettier-plugin-tailwindcss": "^0.1.13",
         "svelte-language-server": "^0.14.37",
         "svelte-preprocess": "^4.10.7",
