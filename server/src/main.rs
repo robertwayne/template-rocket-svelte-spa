@@ -56,7 +56,7 @@ fn rocket() -> _ {
         .attach(CacheControl::default())
         .attach(ContentSecurityPolicy::default())
         .attach(CrossOriginResourceSharing::default())
-        .attach(Postgres::default())
+        // .attach(Postgres::default())
         .attach(Shield::default())
         .mount("/robots.txt", routes![robots])
         .mount("/assets", routes![static_files])
