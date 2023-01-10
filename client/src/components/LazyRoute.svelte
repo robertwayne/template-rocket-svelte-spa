@@ -13,7 +13,7 @@
     let props: svelte.JSX.IntrinsicAttributes & RouteProps<AnyObject>
 
     $: {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        // eslint-disable-next-line
         const { component, ...restProps } = $$props
         props = restProps
     }

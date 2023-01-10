@@ -16,12 +16,12 @@
     let props: svelte.JSX.IntrinsicAttributes & { [name: string]: unknown }
 
     $: {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        // eslint-disable-next-line
         const { component, delay, ...restProps } = $$props
         props = restProps
     }
 
-    // Any page wrapped with this guard will be loaded lazil. During its load
+    // Any page wrapped with this guard will be loaded lazily. During its load
     // time, whatever component/text is in between the tags will be displayed
     // (think loading animation / text). That loading 'content' will have a
     // half-second delay so we don't have pages flashing content while
