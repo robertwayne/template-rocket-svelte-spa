@@ -20,10 +20,7 @@ use std::{
     path::{Path, PathBuf},
 };
 
-use crate::{
-    cache::CacheControl, cors::CrossOriginResourceSharing, csp::ContentSecurityPolicy,
-    postgres::Postgres,
-};
+use crate::{cache::CacheControl, cors::CrossOriginResourceSharing, csp::ContentSecurityPolicy};
 
 const DIST: &str = relative!("dist");
 
@@ -56,7 +53,6 @@ fn rocket() -> _ {
         .attach(CacheControl::default())
         .attach(ContentSecurityPolicy::default())
         .attach(CrossOriginResourceSharing::default())
-        // .attach(Postgres::default())
         .attach(Shield::default())
         .mount("/robots.txt", routes![robots])
         .mount("/assets", routes![static_files])
