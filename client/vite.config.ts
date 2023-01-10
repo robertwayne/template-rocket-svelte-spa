@@ -2,6 +2,7 @@ import * as dotenv from "dotenv"
 
 import { defineConfig } from "vitest/config"
 import { svelte } from "@sveltejs/vite-plugin-svelte"
+
 dotenv.config()
 
 export default ({ mode }) => {
