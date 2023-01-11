@@ -17,9 +17,10 @@
 
 ## Server Notes
 
-- Contains a simple fairing for handling CORS requests.
-- Contains a simple fairing for a Content Security Policy.
-- **The PostgreSQL fairing is disabled by default.**. Add this fairing in `main.rs` if you wish to use it.
+- Built-in fairing for handling CORS requests.
+- Built-in fairing for a Content Security Policy.
+- Built-in fairing for caching static files - caches JS, WOFF2, WEBP, and CSS files by default.
+- **Includes a PostgreSQL fairing, which is disabled by default.**. Add this fairing in `main.rs` if you wish to use it.
 
 ## Client Notes
 
