@@ -19,7 +19,7 @@
 
 - Built-in fairings for CORS (Cross-Origin Resource Sharing) and CSP (Content Security Policy).
 - Built-in fairing for caching static files; caches JS, CSS, WEBP (images), and WOFF2 (fonts) files by default.
-- **Includes a PostgreSQL fairing, which is disabled by default.**. Add this fairing in `main.rs` if you wish to use it.
+- **Includes a PostgreSQL fairing, which is disabled by default.** Add this fairing in `main.rs` if you wish to use it.
 
 ## Client Notes
 
