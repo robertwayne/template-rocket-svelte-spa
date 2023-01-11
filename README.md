@@ -19,7 +19,7 @@
 
 - Contains a simple fairing for handling CORS requests.
 - Contains a simple fairing for a Content Security Policy.
-- **Expects to connect to a PostgreSQL database**. Remove this fairing in `main.rs` if you don't need a database.
+- **The PostgreSQL fairing is disabled by default.**. Add this fairing in `main.rs` if you wish to use it.
 
 ## Client Notes
 
