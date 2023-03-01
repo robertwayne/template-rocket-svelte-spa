@@ -1,6 +1,6 @@
 echo "Updating client dependencies..."
 cd ./client
-npm upgrade &> /dev/null
+pnpm upgrade &> /dev/null
 
 echo "Updating server dependencies..."
 cd ../server
