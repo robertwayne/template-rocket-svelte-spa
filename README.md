@@ -28,7 +28,7 @@
 
 ## Client Notes
 
-- Async, naive prefetching for route links.
+- Async, lazy loading route wrappers.
 - Responsive navigation menu built-in.
 
 ## Server Notes
