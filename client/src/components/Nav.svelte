@@ -17,16 +17,16 @@
     }
 </script>
 
-<nav class="flex flex-row justify-between font-bold">
+<nav class="flex flex-row justify-between font-bold h-fit">
     <h1 class="text-3xl"><Link to="/">Template App</Link></h1>
     <ul
         bind:this={menuElement}
-        class="bg-blur absolute right-0 top-0 hidden h-full w-2/3 flex-col justify-center gap-8 bg-zinc-400 p-2 text-3xl dark:bg-zinc-700 md:flex md:w-fit md:flex-row md:bg-transparent md:text-xl"
+        class="bg-blur absolute right-0 top-0 h-full hidden w-2/3 flex-col justify-center gap-8 bg-zinc-400 p-2 text-3xl dark:bg-zinc-700 md:flex md:w-fit md:flex-row md:bg-transparent md:text-xl"
     >
-        <li class="px-2 hover:text-blue-500 hover:duration-300">
+        <li class="px-2 hover:text-blue-500 hover:duration-300 h-fit">
             <Link to="/" on:click={toggleMenu}>Home</Link>
         </li>
-        <li class="px-2 hover:text-blue-500 hover:duration-300">
+        <li class="px-2 hover:text-blue-500 hover:duration-300 h-fit">
             <Link to="/about" on:click={toggleMenu}>About</Link>
         </li>
     </ul>
@@ -71,7 +71,7 @@
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
+            </svg>a
         </button>
     {/if}
 </nav>

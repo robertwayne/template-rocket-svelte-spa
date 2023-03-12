@@ -10,13 +10,19 @@
     font: inherit;
 }
 
-html {
+html,
+body,
+body > #app > div {
+    font-family: "Roboto", sans-serif;
+    font-display: swap;
     color-scheme: dark light;
     overflow-x: hidden;
+    min-height: 100svh;
 }
 
-body {
-    min-height: 100svh;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 img,

@@ -4,7 +4,7 @@
         "module": "esnext",
         "moduleResolution": "node",
         "lib": ["esnext", "DOM"],
-        "rootDir": "src",
+        "rootDir": "../",
         "outDir": "dist",
         "strict": true,
         "alwaysStrict": true,

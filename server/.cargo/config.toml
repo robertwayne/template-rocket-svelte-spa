@@ -13,5 +13,5 @@ rustflags = ["-C", "target-cpu=native"]
 #     "share-generics=y",
 # ]
 
-[unstable]
-sparse-registry = true
+[registries.crates-io]
+protocol = "sparse"
