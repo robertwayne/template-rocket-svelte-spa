@@ -1,22 +1,24 @@
 [package]
 name = "server"
 authors = ["Rob Wagner <rob@sombia.com>"]
+license = ""
 repository = "https://github.com/robertwayne/template-rocket-svelte-spa"
 version = "0.1.0"
 edition = "2021"
+publish = false
 
 [dependencies]
 dotenvy = "0.15"
 rocket = { version = "0.5.0-rc.2", features = ["json", "secrets"] }
-sqlx = { version = "0.6", features = ["runtime-tokio-rustls", "postgres"] }
-tracing = "0.1"
-tracing-subscriber = { version = "0.3", features = [
-    "time",
-    "env-filter",
-    "local-time",
+sqlx = { version = "0.6", features = [
+    "runtime-tokio-rustls",
+    "postgres",
 ] }
+tracing = { version = "0.1", default-features = false, features = ["std"] }
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 
 [profile.release]
 opt-level = 3
 codegen-units = 1
 lto = true
+strip = true
