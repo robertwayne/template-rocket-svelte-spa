@@ -16,9 +16,7 @@ use std::{
 use dotenvy::dotenv;
 use rocket::{
     fs::{relative, NamedFile},
-    response::stream::{Event, EventStream},
     shield::Shield,
-    tokio::time::{self, Duration},
 };
 use tracing_subscriber::EnvFilter;
 
@@ -52,17 +50,6 @@ async fn index() -> Option<NamedFile> {
         .ok()
 }
 
-#[get("/events")]
-fn stream() -> EventStream![] {
-    EventStream! {
-        let mut interval = time::interval(Duration::from_secs(1));
-        loop {
-            yield Event::data("ping");
-            interval.tick().await;
-        }
-    }
-}
-
 #[launch]
 fn rocket() -> _ {
     dotenv().ok();
@@ -71,9 +58,11 @@ fn rocket() -> _ {
         .init();
 
     rocket::build()
+        .attach(CacheControl::default())
+        .attach(ContentSecurityPolicy::default())
         .attach(CrossOriginResourceSharing::default())
         .attach(Shield::default())
         .mount("/robots.txt", routes![robots])
         .mount("/assets", routes![static_files])
-        .mount("/", routes![index, stream])
+        .mount("/", routes![index])
 }
