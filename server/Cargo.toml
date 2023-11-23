@@ -9,7 +9,7 @@ publish = false
 
 [dependencies]
 dotenvy = "0.15"
-rocket = { version = "0.5.0-rc.3", features = ["json", "secrets"] }
+rocket = { version = "0.5", features = ["json", "secrets"] }
 sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres"] }
 tracing = { version = "0.1", default-features = false, features = ["std"] }
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
