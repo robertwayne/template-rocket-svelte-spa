@@ -28,7 +28,7 @@
         "dotenv": "^16.4.5",
         "eslint": "^8.57.0",
         "eslint-plugin-svelte3": "^4.0.0",
-        "happy-dom": "^13.7.0",
+        "happy-dom": "^13.7.1",
         "postcss": "^8.4.35",
         "postcss-load-config": "^5.0.3",
         "prettier": "^3.2.5",
